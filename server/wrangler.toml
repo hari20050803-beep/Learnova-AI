@@ -1,0 +1,21 @@
+name = "learnova-reset"
+main = "src/worker.js"
+compatibility_date = "2026-01-01"
+
+# Holds each pending six digit code, under a hashed key, for ten minutes.
+# Create it once with:
+#   npx wrangler kv namespace create OTP_KV
+# then paste the id it prints below.
+[[kv_namespaces]]
+binding = "OTP_KV"
+id = "5bf0634bf0584ce3a98247f7f883d281"
+
+# Everything secret is set with `wrangler secret put`, never in this file:
+#   FIREBASE_PROJECT_ID
+#   FIREBASE_CLIENT_EMAIL
+#   FIREBASE_PRIVATE_KEY
+#   EMAILJS_SERVICE_ID
+#   EMAILJS_TEMPLATE_ID
+#   EMAILJS_PUBLIC_KEY
+#   EMAILJS_PRIVATE_KEY
+#   TICKET_SECRET

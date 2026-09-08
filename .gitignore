@@ -1,0 +1,79 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# ---------------------------------------------------------------
+# Secrets — never commit these
+# ---------------------------------------------------------------
+# Holds a live, billable Gemini API key. Copy api_config.example.dart
+# to api_config.dart and paste your own key from
+# https://aistudio.google.com/apikey
+lib/config/api_config.dart
+
+# Firebase client config. Google designs these keys to ship inside an app,
+# so this is not a secret in the way a server key is - the protection is
+# Firebase Security Rules and API key restrictions, not secrecy. It is
+# excluded anyway so a fork does not silently write into this project's
+# Firebase instance.
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+macos/Runner/GoogleService-Info.plist
+
+# Signing
+*.jks
+*.keystore
+key.properties
+
+# The reset endpoint's own files. wrangler keeps secrets on Cloudflare rather
+# than on disk, but these three are worth naming: .dev.vars is where they land
+# during local testing, and a downloaded service-account key can change any
+# password in the Firebase project.
+server/node_modules/
+server/.dev.vars
+server/*service-account*.json
+server/.wrangler/
+
+# Claude Code local settings (machine-specific)
+.claude/
